@@ -294,7 +294,10 @@ section.cards {
     top: 0;
     overflow: hidden;
     transition: all .5s ease;
-    cursor: pointer;
+}
+
+.card-image img {
+    height: 100%;
 }
 
 .main-card .title {
