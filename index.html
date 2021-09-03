@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/buglog-icon.svg" type="image/x-icon">
+
+    <title>BugLog</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <img class="nav-icons" src="./img/buglog-icon.svg" alt="logo">
+                <p>BuGLoG</p>
+            </div>
+
+            <div id="nav-items">
+                <div class="toggle-dark-mode">
+                    <label for="toggle">&#9790;</label>
+                    <input type="checkbox" id="toggle">
+                </div>
+                <div id="login-btn">
+                    <img class="nav-icons" src="./img/user-icon.svg" alt="user icon">
+                    <p>User Name</p>
+                </div>
+                <div id="exit-btn">
+                    <img class="nav-icons" src="./img/logout.svg" alt="">
+                    <p>Sair</p>
+                </div>
+            </div>
+        </nav>
+
+        <div class="login-modal" id="login-modal-container">
+            <div class="modal">
+                <button id="fechar" class="fechar">X</button>
+                <h2 class="subtitulo">Login</h2>
+                <form action="" class="formLog">
+                    <input type="text" class="inputLog" placeholder="Usuário" required>
+                    <input type="password" class="inputLog" placeholder="Senha" required>
+                    <input type="button" class="button" value="Entrar">
+                </form>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="form-modal">
+            <form id="form">
+                <h1>Adicionar Bug</h1>
+                <div>
+                    <label for="url_img">URL com print screen do bug</label>
+                    <input id="url_img" name="url_img" type="text" placeholder="Cole aqui a URL da imagem">
+                </div>
+                <div>
+                    <label for="titulo">Título</label>
+                    <input id="titulo" name="titulo" type="text" placeholder="Dê um título que facilite a identificação" maxlength="25">
+                </div>
+                <div>
+                    <label for="descricao">Descrição da ocorrência</label>
+                    <textarea id="descricao" name="descricao" rows="4" cols="40" placeholder="Descreva a falha com mais detalhes" maxlength="130"></textarea>
+                </div>
+                <div id="counter-container">
+                    <span>
+                        <p id="counter">150</p>
+                    </span>
+                </div>
+                <div class="modal-btn">
+                    <button id="btn_Salvar">Adicionar</button>
+                    <button id="btn-close-form">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <section class="cards">
+
+            <article class="add-card main-card" id="btn-open-form">
+                <h3 id="add-card-title">Adicionar um novo bug encontrado</h3>
+                <span id="plus">+</span>
+            </article>
+
+            <article class="main-card card">
+                <div class="card-image">
+                    <img src="https://placedog.net/300/300?random" alt="" />
+                </div>
+                <h1 class="title">Título dsas dsadasd sfsfds</h1> <!-- 26 caracteres -->
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sem
+                    faucibus dignissim at ac eros. Nulla in venenatis.</p> <!-- 120 caracteres -->
+                <button class='remove-btn'>&#215</button>
+            </article>
+
+            <article class="main-card card">
+                <div class="card-image">
+                    <img src="https://placedog.net/300/300?random" alt="" />
+                </div>
+                <h1 class="title">Título dsas dsadasd sfsfds</h1> <!-- 26 caracteres -->
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sem
+                    faucibus dignissim at ac eros. Nulla in venenatis.</p> <!-- 120 caracteres -->
+                <button class='remove-btn'>&#215</button>
+            </article>
+
+            <article class="main-card card">
+                <div class="card-image">
+                    <img src="https://placedog.net/300/300?random" alt="" />
+                </div>
+                <h1 class="title">Título dsas dsadasd sfsfds</h1> <!-- 26 caracteres -->
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sem
+                    faucibus dignissim at ac eros. Nulla in venenatis.</p> <!-- 120 caracteres -->
+                <button class='remove-btn'>&#215</button>
+            </article>
+
+            <article class="main-card card">
+                <div class="card-image">
+                    <img src="https://placedog.net/300/300?random" alt="" />
+                </div>
+                <h1 class="title">Título dsas dsadasd sfsfds</h1> <!-- 26 caracteres -->
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sem
+                    faucibus dignissim at ac eros. Nulla in venenatis.</p> <!-- 120 caracteres -->
+                <button class='remove-btn'>&#215</button>
+            </article>
+
+            <article class="main-card card">
+                <div class="card-image">
+                    <img src="https://placedog.net/300/300?random" alt="" />
+                </div>
+                <h1 class="title">Título dsas dsadasd sfsfds</h1> <!-- 26 caracteres -->
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sem
+                    faucibus dignissim at ac eros. Nulla in venenatis.</p> <!-- 120 caracteres -->
+                <button class='remove-btn'>&#215</button>
+            </article>
+
+            <article class="main-card card">
+                <div class="card-image">
+                    <img src="https://placedog.net/300/300?random" alt="" />
+                </div>
+                <h1 class="title">Título dsas dsadasd sfsfds</h1> <!-- 26 caracteres -->
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sem
+                    faucibus dignissim at ac eros. Nulla in venenatis.</p> <!-- 120 caracteres -->
+                <button class='remove-btn'>&#215</button>
+            </article>
+
+            <article class="main-card card">
+                <div class="card-image">
+                    <img src="https://placedog.net/300/300?random" alt="" />
+                </div>
+                <h1 class="title">Título dsas dsadasd sfsfds</h1> <!-- 26 caracteres -->
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sem
+                    faucibus dignissim at ac eros. Nulla in venenatis.</p> <!-- 120 caracteres -->
+                <button class='remove-btn'>&#215</button>
+            </article>
+
+            <article class="main-card card">
+                <div class="card-image">
+                    <img src="https://placedog.net/300/300?random" alt="" />
+                </div>
+                <h1 class="title">Título dsas dsadasd sfsfds</h1> <!-- 26 caracteres -->
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sem
+                    faucibus dignissim at ac eros. Nulla in venenatis.</p> <!-- 120 caracteres -->
+                <button class='remove-btn'>&#215</button>
+            </article>
+
+            <article class="main-card card">
+                <div class="card-image">
+                    <img src="https://placedog.net/300/300?random" alt="" />
+                </div>
+                <h1 class="title">Título dsas dsadasd sfsfds</h1> <!-- 26 caracteres -->
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sem
+                    faucibus dignissim at ac eros. Nulla in venenatis.</p> <!-- 120 caracteres -->
+                <button class='remove-btn'>&#215</button>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Certified Tech Developer - Digital House - Copyleft &#127279; 2021</p>
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
