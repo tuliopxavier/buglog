@@ -26,13 +26,11 @@ export const handleClickOutside = (event) => {
 
 // abrir e fechar login 
 
-const btnLogin = document.getElementById('login-btn')
 export let openLogin = () => {
     const modal = document.getElementById('login-modal-container')
     modal.classList.add('mostrar')
 };
 
-const fechar = document.getElementById('fechar');
 export let closeLogin = () => {
     const modal = document.getElementById('login-modal-container');
     modal.classList.remove('mostrar')

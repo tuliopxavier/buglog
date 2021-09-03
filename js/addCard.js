@@ -1,5 +1,6 @@
 import removeCard from "./removeCard.js";
 import { handleClickOutside } from "./openCloseForms.js"
+import inputCounter from "./inputCounter.js"
 
 export default function addCard(e) {
     // previnir o comportamento padrão de carregamento
@@ -31,6 +32,11 @@ export default function addCard(e) {
     if (descricao.value == "") {
         descricao.value = '...';
     };
+
+    // checa se está sem
+    if (counter.length != 0) {
+        counter.innerText = 130;
+    }
     
     //Inserimos cards
     

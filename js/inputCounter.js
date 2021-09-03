@@ -9,5 +9,5 @@ export default function inputCounter() {
     } else {
         counter.style.color = '';
         counterCircle.style.borderColor = '';
-    }
+    };
 };
