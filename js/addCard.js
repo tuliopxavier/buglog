@@ -36,7 +36,9 @@ export default function addCard(e) {
     // checa se está sem
     if (counter.length != 0) {
         counter.innerText = 130;
-    }
+        counter.style.color = '';
+        document.querySelector('#counter-container span').style.borderColor = '';
+    };
     
     //Inserimos cards
     

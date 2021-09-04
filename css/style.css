@@ -287,17 +287,20 @@ section.cards {
 }
 
 .card-image {
-    height: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 17rem;
     width: 100%;
     position: absolute;
     border-radius: .5rem .5rem 0 0;
     top: 0;
     overflow: hidden;
-    transition: all .5s ease;
 }
 
 .card-image img {
     height: 100%;
+    width: auto;
 }
 
 .main-card .title {
@@ -310,6 +313,7 @@ section.cards {
 }
 
 .main-card .description {
+    font-size: .9rem;
     color: var(--primary-color);
     line-height: 1.2rem;
 }
