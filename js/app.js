@@ -38,3 +38,36 @@ btnOpenForm.onclick = openForm();
 btnCloseForm.onclick = closeForm();
 
 
+
+
+
+// verificando se tem algum campo vazio (o usuário precisa inserir alguma informação)
+let url = document.getElementById("url_img");
+let titulo = document.getElementById("titulo");
+let btnWraper = document.getElementById("btn_Salvar_wraper");
+let inputAddCard = document.querySelectorAll('.input-add-card');
+
+btnWraper.addEventListener("mouseover", () => {
+    if (descricao.value.trim() == "" && titulo.value.trim() == "" && url.value.trim() == "") {
+        document.getElementById("btn_Salvar").disabled = true;
+        document.getElementById("btn_Salvar").style.color = 'var(--tertiary-color)';
+        document.getElementById("btn_Salvar").innerText = 'Preencha pelo menos um campo';
+        document.getElementById("btn_Salvar").style.outline = 'solid 2px red';
+        inputAddCard.forEach(item => { item.style.outline = 'solid 2px var(--tertiary-color)'; });
+        
+    } else if (descricao.value.trim() != "" || titulo.value.trim() != "" || url.value.trim() != "") {
+        document.getElementById("btn_Salvar").removeAttribute("disabled");
+    }
+});
+
+inputAddCard.forEach(item => {
+    item.addEventListener("mouseover", () => {
+        document.getElementById("btn_Salvar").style.color = '';
+        document.getElementById("btn_Salvar").innerText = 'Adicionar';
+        document.getElementById("btn_Salvar").style.outline = '';
+        inputAddCard.forEach(item => { item.style.outline = ''; });
+    });
+});
+
+
+

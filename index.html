@@ -57,15 +57,15 @@
                 <h1>Adicionar Bug</h1>
                 <div>
                     <label for="url_img">URL com print screen do bug</label>
-                    <input id="url_img" name="url_img" type="text" placeholder="Cole aqui a URL da imagem">
+                    <input id="url_img" class="input-add-card" name="url_img" type="text" placeholder="Cole aqui a URL da imagem">
                 </div>
                 <div>
                     <label for="titulo">Título</label>
-                    <input id="titulo" name="titulo" type="text" placeholder="Dê um título que facilite a identificação" maxlength="25">
+                    <input id="titulo" class="input-add-card" name="titulo" type="text" placeholder="Dê um título que facilite a identificação" maxlength="25">
                 </div>
                 <div>
                     <label for="descricao">Descrição da ocorrência</label>
-                    <textarea id="descricao" name="descricao" rows="4" cols="40" placeholder="Descreva a falha com mais detalhes" maxlength="130"></textarea>
+                    <textarea id="descricao" class="input-add-card" name="descricao" rows="4" cols="40" placeholder="Descreva a falha com mais detalhes" maxlength="130"></textarea>
                 </div>
                 <div id="counter-container">
                     <span>
@@ -73,7 +73,9 @@
                     </span>
                 </div>
                 <div class="modal-btn">
-                    <button type="submit" id="btn_Salvar">Adicionar</button>
+                    <div id="btn_Salvar_wraper">
+                        <button type="submit" id="btn_Salvar">Adicionar</button>
+                    </div>
                     <button type="reset" id="btn-close-form">Cancelar</button>
                 </div>
             </form>

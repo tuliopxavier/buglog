@@ -17,23 +17,23 @@ export default function addCard(e) {
 
     //Selecionando o modal
     let formModal = document.querySelector("#form-modal");
-
-    //checa se não foi adicionado url e adiciona uma imagem padrão
-    if (url.value == "") {
+    
+    //verificando se não foi adicionado url e adiciona uma imagem padrão
+    if (url.value.trim() == "") {
         url.value = "./img/buglog.jpg";
     };
 
-    // checa se está sem título e adiciona o número do bug
-    if (titulo.value == "") {
+    // verificando se está sem título e adiciona o número do bug
+    if (titulo.value.trim() == "") {
         titulo.value = `Bug #${sectionCard.length + 1}`;
     };
 
-    // checa se está sem descrição
-    if (descricao.value == "") {
+    // verificando se está sem descrição
+    if (descricao.value.trim() == "") {
         descricao.value = '...';
     };
 
-    // checa se está sem
+    // reseta contador
     if (counter.length != 0) {
         counter.innerText = 130;
         counter.style.color = '';
@@ -54,6 +54,13 @@ export default function addCard(e) {
     
     `);
 
+    // Fazer o card aparecer de forma suave
+    document.querySelector('.card').style.opacity = 0;
+    document.querySelector('.card').style.transition = 'all .5s ease';
+    setTimeout(()=>{
+        document.querySelector('.card').style.opacity = 1;
+    },200);
+    
     // retornar os inputs ao padrão (vazio)
     url.value = "";
     titulo.value = "";
