@@ -135,7 +135,7 @@ label[for="toggle"] {
 }
 #form-modal textarea {
     border: none;
-    background-color: var(--secondary-color-light);;
+    background-color: var(--secondary-color-light);
     width: 100%;
     border-radius: .5rem;
     margin-bottom: 1rem;
@@ -146,16 +146,51 @@ label[for="toggle"] {
 #form label {
     display: inline-block;
     color: var(--background-color);
-    background-color: var(--secondary-color);
-    font-size: .75rem;
     border-radius: 1rem;
-    padding: .2rem .5rem;
+    padding: .25rem .75rem;
     position: relative;
-    bottom: -.5rem;
+    top: -3.1rem;
+    transform-origin: 0 50%;
+    transition: all 0.5s ease;
 }
 
-.input-add-class:focused::before {
-    display: none;
+#form label[for="descricao"] {
+    top: -6.1rem;
+}
+
+.input-add-card:hover ~ label,
+.input-add-card:focus ~ label,
+.input-add-card:not(:placeholder-shown) ~ label {
+    background-color: var(--secondary-color);
+    transform: translateY(-2rem) translateX(.5rem) scale(0.75);
+}
+
+#counter-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: -2.75rem 1rem 2rem 0;
+    
+}
+
+#counter-container span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px var(--primary-color);
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: -2rem .25rem 0 0;
+    z-index: 1;
+}
+
+#counter {
+    color: var(--primary-color);
+    font-size: .5rem;
+}
+
+.description {
+    overflow: auto;
 }
 
 .modal-btn {
@@ -324,33 +359,6 @@ section.cards {
     font-size: .9rem;
     color: var(--primary-color);
     line-height: 1.2rem;
-}
-
-#counter-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -1rem;
-}
-
-#counter-container span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: solid 1px var(--primary-color);
-    border-radius: 50%;
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: -2rem .25rem 0 0;
-    z-index: 1;
-}
-
-#counter {
-    color: var(--primary-color);
-    font-size: .5rem;
-}
-
-.description {
-    overflow: auto;
 }
 
 /* ============ BUTTON ============ */

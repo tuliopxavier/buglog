@@ -56,16 +56,16 @@
             <form id="form">
                 <h1>Adicionar Bug</h1>
                 <div>
-                    <label for="url_img">URL com print screen do bug</label>
-                    <input id="url_img" class="input-add-card" name="url_img" type="text" placeholder="Cole aqui a URL da imagem">
+                    <input id="url_img" class="input-add-card" name="url_img" type="text" placeholder=" ">
+                    <label for="url_img">URL com imagem do bug</label>
                 </div>
                 <div>
+                    <input id="titulo" class="input-add-card" name="titulo" type="text" placeholder=" " maxlength="25">
                     <label for="titulo">Título</label>
-                    <input id="titulo" class="input-add-card" name="titulo" type="text" placeholder="Título conciso que facilite a identificação" maxlength="25">
                 </div>  
                 <div>
+                    <textarea id="descricao" class="input-add-card" name="descricao" rows="4" cols="40" placeholder=" " maxlength="130"></textarea>
                     <label for="descricao">Descrição da ocorrência</label>
-                    <textarea id="descricao" class="input-add-card" name="descricao" rows="4" cols="40" placeholder="Descreva a falha com mais detalhes" maxlength="130"></textarea>
                 </div>
                 <div id="counter-container">
                     <span>
