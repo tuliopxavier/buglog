@@ -23,6 +23,7 @@ export function closeForm(){
             counter.style.color = '';
             document.querySelector('#counter-container span').style.borderColor = '';
         };
+        resetInputs();
     });
 };
 
@@ -33,6 +34,7 @@ export const handleClickOutside = (event) => {
         document.getElementById('form-modal').style.display = 'none';
         document.removeEventListener('click', handleClickOutside, false);
     };
+    resetInputs();
 };
 
 
