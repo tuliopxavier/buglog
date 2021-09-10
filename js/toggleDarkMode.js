@@ -7,9 +7,9 @@ export function darkMode() {
         `--background-color: var(--primary-color);
         --tertiary-color: #e45858;`);
 
-    document.querySelector('label').style.color = '#ccc';
-    document.querySelector('span').style.color = '#ffffff50';
-
+    document.getElementById('mode-label').innerText = 'Light Mode';
+    document.getElementById('plus').style.color = '#ffffff50';
+    
     document.querySelectorAll('.nav-icons').forEach(function(item) {
         item.style.filter = 'invert(94%) sepia(3%) saturate(23%) hue-rotate(12deg) brightness(89%) contrast(87%)';
     });
@@ -19,6 +19,7 @@ export function darkMode() {
     document.querySelectorAll('p').forEach(function(item) {
         item.style.color = '#ccc';
     });
+    document.getElementById('counter').style.color = 'var(--primary-color)';
 };
 
 export function lightMode() {
@@ -28,8 +29,8 @@ export function lightMode() {
 
     document.documentElement.setAttribute('style', '');
 
-    document.querySelector('label').style.color = '';
-    document.querySelector('span').style.color = '';
+    document.getElementById('mode-label').innerText = 'Dark Mode';
+    document.getElementById('plus').style.color = '';
 
     document.querySelectorAll('.nav-icons').forEach(function(item) {
         item.style.filter = '';
@@ -40,4 +41,5 @@ export function lightMode() {
     document.querySelectorAll('p').forEach(function(item) {
         item.style.color = '';
     });
+    document.getElementById('counter').style.color = '';
 };

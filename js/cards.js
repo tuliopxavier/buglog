@@ -1,4 +1,5 @@
 import { handleClickOutside } from "./forms.js"
+import { darkMode, lightMode } from "./toggleDarkMode.js"
 
 export function addCard(e) {
     // previnir o comportamento padrão de carregamento
@@ -71,6 +72,9 @@ export function addCard(e) {
 
     // removendo o listener de fechar o form ao clicar fora
     document.removeEventListener('click', handleClickOutside, false);
+
+    // adicionando estilo dark/light mode ao criar o card
+    toggle.checked ? darkMode() : lightMode();
     
     // fecha o modal
     formModal.style.display = "none";

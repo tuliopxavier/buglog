@@ -4,15 +4,16 @@ import { addCard, removeCard } from "./cards.js";
 import inputCounter from "./inputCounter.js"
 
 // dark and light mode
-
-let toggle = document.querySelector('#toggle');
-toggle.addEventListener('change', function () {
-    if (toggle.checked) {
-        darkMode();
-    } else {
-        lightMode();
-    };
+let toggle = document.getElementById('toggle');
+toggle.addEventListener('change', () => {
+    toggle.checked ? darkMode() : lightMode();
 });
+// para ativar dark mode ao clicar no texto dark/light mode
+let modeLabel = document.getElementById('mode-label');
+modeLabel.onclick = () => {
+    toggle.checked = !toggle.checked;
+    toggle.checked ? darkMode() : lightMode();
+};
 
 // adicionando funcionalidade de remover cards para
 removeCard();
