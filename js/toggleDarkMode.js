@@ -1,6 +1,7 @@
 export function darkMode() {
     let toggle = document.querySelector('label[for="toggle"]');
     toggle.style.transform = 'rotate(720deg)';
+    toggle.style.color = '#ccc';
     toggle.innerText = '☼';
 
     document.documentElement.setAttribute('style', 
@@ -25,6 +26,7 @@ export function darkMode() {
 export function lightMode() {
     let toggle = document.querySelector('label[for="toggle"]');
     toggle.style.transform = '';
+    toggle.style.color = '';
     toggle.innerHTML = '&#9790;';
 
     document.documentElement.setAttribute('style', '');
