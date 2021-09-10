@@ -3,7 +3,6 @@ export function darkMode() {
     toggle.style.transform = 'rotate(720deg)';
     toggle.innerText = '☼';
 
-
     document.documentElement.setAttribute('style', 
         `--background-color: var(--primary-color);
         --tertiary-color: #e45858;`);
@@ -42,13 +41,3 @@ export function lightMode() {
         item.style.color = '';
     });
 };
-
-let toggle = document.querySelector('#toggle');
-
-toggle.addEventListener('change', function() {
-    if (toggle.checked) {
-        darkMode();
-    } else {
-        lightMode();
-    };
-});

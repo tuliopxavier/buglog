@@ -1,7 +1,6 @@
-import { openForm, closeForm, openLogin, closeLogin } from "./openCloseForms.js"
-import removeCard from "./removeCard.js"
-import { lightMode, darkMode } from "./toggle.js";
-import addCard from "./addCard.js";
+import { openForm, closeForm, openLogin, closeLogin, addButtonValidate, resetInputs } from "./forms.js"
+import { lightMode, darkMode } from "./toggleDarkMode.js";
+import { addCard, removeCard } from "./cards.js";
 import inputCounter from "./inputCounter.js"
 
 // dark and light mode
@@ -14,6 +13,9 @@ toggle.addEventListener('change', function () {
         lightMode();
     };
 });
+
+// adicionando funcionalidade de remover cards para
+removeCard();
 
 // nav links
 document.querySelector('#exit-btn').onclick = () => { location.reload(); };
@@ -37,37 +39,17 @@ let btnCloseForm = document.getElementById('btn-close-form');
 btnOpenForm.onclick = openForm();
 btnCloseForm.onclick = closeForm();
 
+// verificando se tem algum input vazio (o usuário precisa inserir alguma informação)
 
-
-
-
-// verificando se tem algum campo vazio (o usuário precisa inserir alguma informação)
-let url = document.getElementById("url_img");
-let titulo = document.getElementById("titulo");
 let btnWraper = document.getElementById("btn_Salvar_wraper");
 let inputAddCard = document.querySelectorAll('.input-add-card');
 
-btnWraper.addEventListener("mouseover", () => {
-    if (descricao.value.trim() == "" && titulo.value.trim() == "" && url.value.trim() == "") {
-        document.getElementById("btn_Salvar").disabled = true;
-        document.getElementById("btn_Salvar").style.color = 'var(--tertiary-color)';
-        document.getElementById("btn_Salvar").innerText = 'Preencha pelo menos um campo';
-        document.getElementById("btn_Salvar").style.outline = 'solid 2px red';
-        inputAddCard.forEach(item => { item.style.outline = 'solid 2px var(--tertiary-color)'; });
-        
-    } else if (descricao.value.trim() != "" || titulo.value.trim() != "" || url.value.trim() != "") {
-        document.getElementById("btn_Salvar").removeAttribute("disabled");
-    }
-});
+btnWraper.addEventListener("mouseover", addButtonValidate);
+addNewItem.addEventListener("focus", addButtonValidate);
 
+// resetando o botão e inputs após verificação
 inputAddCard.forEach(item => {
-    item.addEventListener("mouseover", () => {
-        document.getElementById("btn_Salvar").style.color = '';
-        document.getElementById("btn_Salvar").innerText = 'Adicionar';
-        document.getElementById("btn_Salvar").style.outline = '';
-        inputAddCard.forEach(item => { item.style.outline = ''; });
-    });
+    item.addEventListener("mouseover", resetInputs);
+    item.addEventListener("focus", resetInputs);
 });
-
-
 

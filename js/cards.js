@@ -1,8 +1,6 @@
-import removeCard from "./removeCard.js";
-import { handleClickOutside } from "./openCloseForms.js"
-import inputCounter from "./inputCounter.js"
+import { handleClickOutside } from "./forms.js"
 
-export default function addCard(e) {
+export function addCard(e) {
     // previnir o comportamento padrão de carregamento
     e.preventDefault();
 
@@ -34,10 +32,12 @@ export default function addCard(e) {
     };
 
     // reseta contador
+    let counter = document.getElementById("counter");
+    let counterCircle = document.querySelector('#counter-container span');
     if (counter.length != 0) {
         counter.innerText = 130;
         counter.style.color = '';
-        document.querySelector('#counter-container span').style.borderColor = '';
+        counterCircle.style.borderColor = '';
     };
     
     //Inserimos cards
@@ -74,4 +74,18 @@ export default function addCard(e) {
     
     // fecha o modal
     formModal.style.display = "none";
+};
+
+export function removeCard() {
+    let removeButton = document.querySelectorAll('.remove-btn');
+    let card = document.querySelectorAll('.card');
+    for (let i = 0; i < card.length; i++) {
+        removeButton[i].addEventListener('click', () => { 
+            card[i].style.opacity = 0;
+            card[i].style.transform = 'rotate(-20deg) translate(-10rem, -10rem)';
+            setTimeout(()=>{
+                card[i].remove();
+            }, 500); 
+        });
+    };
 };
