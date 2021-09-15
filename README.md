@@ -5,8 +5,12 @@ O entregável será uma página em HTML5, CSS3 e Javascript.
 
 Link da aplicação: https://tuliopxavier.github.io/buglog/
 
+
 <img height="400px" width="auto" alt="App Screenshot" src="./img/bugLog-screenShot.png">
-<img height="200px" width="auto" alt="wireframe 01" src="./img/wireframe01.png"> <img height="200px" width="auto" alt="wireframe 02" src="./img/wireframe02.png">
+
+## Wireframes do projeto
+
+<img height="200px" width="auto" alt="wireframe 01" src="./img/wireframe01.png"/><img height="200px" width="auto" alt="wireframe 02" src="./img/wireframe02.png"/>
 
 ## Instruções e requisitos do entregável
 	
