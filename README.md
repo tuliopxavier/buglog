@@ -4,7 +4,7 @@ Checkpoint 01 - Front-end II
 O entregável será uma página em HTML5, CSS3 e Javascript. 
 
 Link da aplicação:
-<a href="https://tuliopxavier.github.io/buglog/" target="_blank">https://tuliopxavier.github.io/buglog/</a>
+<a href="https://tuliopxavier.github.io/buglog/" target="_blank">tuliopxavier.github.io/buglog/</a>
 
 <img height="400px" width="auto" alt="App Screenshot" src="./img/bugLog-screenShot.png">
 
