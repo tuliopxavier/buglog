@@ -51,3 +51,9 @@ modeLabel.onclick = () => {
     toggle.checked = !toggle.checked;
     toggle.checked ? darkMode() : lightMode();
 };
+
+// menu responsivo
+document.getElementById('menu-button').onclick = () => {
+    document.getElementById('menu-button').classList.toggle('open');
+    document.getElementById('nav-items').classList.toggle('open');
+}
