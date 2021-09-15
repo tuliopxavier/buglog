@@ -407,12 +407,37 @@ label[for="toggle"] {
 
 footer {
     color: var(--secondary-color);
-    display: grid;
-    place-items: center ;
+    display: flex;
+    align-items: center ;
+    justify-content: space-evenly;
     width: 100%;
     padding: 1rem 1rem 2rem;
     text-align: center;
 }
+
+footer #team {
+    position: relative;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+/* footer #team:hover {
+    color: var(--secondary-color-light);
+} */
+
+footer #team:hover ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+footer ul {
+    display: none;
+    position: absolute;
+    align-items: flex-start;
+    top: -5rem;
+    left: 0;
+    width: 10rem;}
 
 
 /* ============ ANIMATIONS ============ */
