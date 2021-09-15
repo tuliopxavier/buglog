@@ -3,6 +3,10 @@ Checkpoint 01 - Front-end II
 
 O entregável será uma página em HTML5, CSS3 e Javascript. 
 
+Link da aplicação: https://tuliopxavier.github.io/buglog/
+
+<img alt="App Screenshot" src="./img/bugLog-screenShot.png">
+
 ## Instruções e requisitos do entregável
 	
 - O tema da aplicação é de sua preferência. Pode ser sobre carros, animes, cidades ou outro tema. A aplicação deve ser responsiva.
