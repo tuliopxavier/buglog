@@ -133,6 +133,7 @@ label[for="toggle"] {
     margin-bottom: 1rem;
     padding: 1rem .5rem 1rem;
 }
+
 #form-modal textarea {
     border: none;
     background-color: var(--secondary-color-light);
@@ -421,10 +422,6 @@ footer #team {
     cursor: pointer;
 }
 
-/* footer #team:hover {
-    color: var(--secondary-color-light);
-} */
-
 footer #team:hover ul {
     display: flex;
     flex-direction: column;
@@ -493,10 +490,42 @@ footer ul {
     width: 50%;
     min-width: 300px;
     padding: 40px;
-    border: 10px solid var(--secondary-color-light);
     box-shadow: 0 0 0 10px var(--background-color);
     position: relative;
     border-radius: 0.5%;
+}
+
+.modal input {
+    border: none;
+    background-color: var(--secondary-color-light);
+    width: 100%;
+    height: 3rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    padding: 1rem .5rem 1rem;
+}
+
+.modal button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    text-transform: uppercase;
+    border: none;
+    width: 8rem;
+    height: 3rem;
+    border-radius: .5rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+.modal button:hover {
+    color: var(--secondary-color);
+    background-color: var(--secondary-color-light);
+    border: none;
+    transform: scale(1.05);
 }
 
 .fechar{
@@ -536,4 +565,11 @@ footer ul {
     background: var(--secondary-color);
     color: white;
     border-radius: 10%;
+}
+
+button#fechar {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
 }
