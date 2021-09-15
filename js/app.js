@@ -53,4 +53,3 @@ inputAddCard.forEach(item => {
     item.addEventListener("mouseover", resetInputs);
     item.addEventListener("focus", resetInputs);
 });
-
