@@ -6,6 +6,8 @@ O entregável será uma página em HTML5, CSS3 e Javascript.
 Link da aplicação:
 <a href="https://tuliopxavier.github.io/buglog/" target="_blank">tuliopxavier.github.io/buglog/</a>
 
+<hr>
+
 <img height="400px" width="auto" alt="App Screenshot" src="./img/bugLog-screenShot.png">
 
 ## Wireframes do projeto
