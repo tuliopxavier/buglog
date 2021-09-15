@@ -38,14 +38,22 @@
             </div>
         </nav>
 
-        <div class="login-modal" id="login-modal-container">
-            <div class="modal">
-                <button id="fechar" class="fechar">&#215</button>
-                <h2 class="subtitulo">Login</h2>
-                <form action="" class="formLog">
-                    <input type="text" class="inputLog" placeholder="Usuário" required>
-                    <input type="password" class="inputLog" placeholder="Senha" required>
-                    <button type="button" class="button" value="Entrar">Entrar</button>
+        <div id="login-modal">
+            <div id="login">
+                <h1>Login</h2>
+                <form id="login-form">
+                    <div>
+                        <input id="input-email" class="login-input" name="input-email" type="email" placeholder=" " required>
+                        <label for="input-email">email</label>
+                    </div>
+                    <div>
+                        <input id="input-password" class="login-input" name="input-password" type="password" placeholder=" " required>
+                        <label for="input-password">senha</label>
+                    </div>
+                    <div id="login-buttons">
+                        <button id="submit-login" type="submit">Entrar</button>
+                        <button id="close-login" type="reset">Cancelar</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -75,9 +83,9 @@
                 </div>
                 <div class="modal-btn">
                     <div id="btn_Salvar_wraper">
-                        <button type="submit" id="btn_Salvar">Adicionar</button>
+                        <button id="btn_Salvar" type="submit">Adicionar</button>
                     </div>
-                    <button type="reset" id="btn-close-form">Cancelar</button>
+                    <button id="btn-close-form" type="reset">Cancelar</button>
                 </div>
             </form>
         </div>

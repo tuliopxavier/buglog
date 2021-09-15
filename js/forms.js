@@ -2,7 +2,7 @@
 export function openForm(){
     document.getElementById('btn-open-form').addEventListener("click", () => {
         document.getElementById('form-modal').style.display = "flex";
-        setTimeout(() => { document.addEventListener("click", handleClickOutside, false) },200);
+        setTimeout(() => { document.addEventListener("click", handleClickOutsideForm, false) },200);
     });
 };
 
@@ -10,12 +10,13 @@ export function closeForm(){
     document.getElementById('btn-close-form').addEventListener("click", (e) => {
         e.preventDefault();
         document.getElementById('form-modal').style.display = "none";
-        document.removeEventListener('click', handleClickOutside, false);
+        document.removeEventListener('click', handleClickOutsideForm, false);
         
         // retornar os inputs ao padrão (vazio)
         document.getElementById("url_img").value = "";
         document.getElementById("titulo").value = "";
         document.getElementById("descricao").value = "";
+
         // reseta contador
         let counter = document.getElementById("counter");
         if (counter.length != 0) {
@@ -27,12 +28,12 @@ export function closeForm(){
     });
 };
 
-export const handleClickOutside = (event) => {
+export const handleClickOutsideForm = (event) => {
     let form = document.getElementById('form');
 
     if (!form.contains(event.target)) {
         document.getElementById('form-modal').style.display = 'none';
-        document.removeEventListener('click', handleClickOutside, false);
+        document.removeEventListener('click', handleClickOutsideForm, false);
     };
     resetInputs();
 };
@@ -67,15 +68,29 @@ export const resetInputs = () => {
 
 
 
+
 // abrir e fechar login 
 
-export let openLogin = () => {
-    const modal = document.getElementById('login-modal-container')
-    modal.classList.add('mostrar')
+export function openLogin() {
+    document.getElementById('login-btn').addEventListener("click", () => {
+        document.getElementById('login-modal').style.display = 'flex';
+        setTimeout(() => { document.addEventListener("click", handleClickOutsideLogin, false) },200);
+    });
 };
 
-export let closeLogin = () => {
-    const modal = document.getElementById('login-modal-container');
-    modal.classList.remove('mostrar')
+export function closeLogin() {
+    document.getElementById('close-login').addEventListener("click", (e) => {
+        document.getElementById('login-modal').style.display = 'none';
+        document.removeEventListener('click', handleClickOutsideLogin, false);
+    });
+};
+
+export const handleClickOutsideLogin = (event) => {
+    let login = document.getElementById('login');
+
+    if (!login.contains(event.target)) {
+        document.getElementById('login-modal').style.display = 'none';
+        document.removeEventListener('click', handleClickOutsideLogin, false);
+    };
 };
 

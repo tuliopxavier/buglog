@@ -1,4 +1,4 @@
-import { handleClickOutside } from "./forms.js"
+import { handleClickOutsideForm } from "./forms.js"
 import { darkMode, lightMode } from "./toggleDarkMode.js"
 
 export function addCard(e) {
@@ -29,7 +29,7 @@ export function addCard(e) {
 
     // verificando se está sem descrição
     if (descricao.value.trim() == "") {
-        descricao.value = '...';
+        descricao.value = '...sem descrição...';
     };
 
     // reseta contador
@@ -71,7 +71,7 @@ export function addCard(e) {
     removeCard();
 
     // removendo o listener de fechar o form ao clicar fora
-    document.removeEventListener('click', handleClickOutside, false);
+    document.removeEventListener('click', handleClickOutsideForm, false);
 
     // adicionando estilo dark/light mode ao criar o card
     toggle.checked ? darkMode() : lightMode();

@@ -95,7 +95,8 @@ label[for="toggle"] {
 
 /* ============ FORM MODAL ============ */
 
-#form-modal {
+#form-modal,
+#login-modal {
     display: none;
     align-items: center;
     justify-content: center;
@@ -108,7 +109,8 @@ label[for="toggle"] {
     transition: all .5s ease;
 }
 
-#form {
+#form,
+#login {
     margin: 2rem auto;
     padding: 2rem;
     width: 100%;
@@ -119,12 +121,14 @@ label[for="toggle"] {
     background-color: var(--background-color);
 }
 
-#form-modal h1 {
+#form-modal h1,
+#login-modal h1 {
     color: var(--primary-color);
     margin-bottom: 2rem;
 }
 
-#form-modal input {
+#form-modal input,
+#login-modal input {
     border: none;
     background-color: var(--secondary-color-light);
     width: 100%;
@@ -144,7 +148,8 @@ label[for="toggle"] {
     font-family: 'Helvetica', sans-serif;
 }
 
-.input-add-card ~ label {
+.input-add-card ~ label,
+.login-input ~ label {
     display: inline-block;
     color: var(--primary-color);
     border-radius: 1rem;
@@ -161,7 +166,10 @@ label[for="toggle"] {
 
 .input-add-card:hover ~ label,
 .input-add-card:focus ~ label,
-.input-add-card:not(:placeholder-shown) ~ label {
+.input-add-card:not(:placeholder-shown) ~ label,
+.login-input:hover ~ label,
+.login-input:focus ~ label,
+.login-input:not(:placeholder-shown) ~ label {
     color: var(--background-color);
     background-color: var(--secondary-color);
     transform: translateY(-2rem) translateX(.5rem) scale(0.75);
@@ -195,14 +203,16 @@ label[for="toggle"] {
     overflow: auto;
 }
 
-.modal-btn {
+.modal-btn,
+#login-buttons {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex: 2;
 }
 
-.modal-btn button {
+.modal-btn button,
+#login-buttons button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,14 +228,17 @@ label[for="toggle"] {
     transition: all .25s;
 }
 
-#btn-close-form {
+#btn-close-form,
+button#close-login {
     color: var(--secondary-color);
     border: solid 1px var(--secondary-color);
     background-color: var(--background-color);
 }
 
-.modal-btn button:hover,
-#btn-close-form:hover {
+#btn_Salvar:hover,
+#submit-login:hover,
+#btn-close-form:hover,
+button#close-login:hover {
     color: var(--secondary-color);
     background-color: var(--secondary-color-light);
     border: none;
@@ -363,7 +376,7 @@ section.cards {
     line-height: 1.2rem;
 }
 
-/* ============ BUTTON ============ */
+/* ============  REMOVE CARD BUTTON ============ */
 
 .main-card:hover button {
     display: flex;
@@ -460,116 +473,4 @@ footer ul {
         opacity: 1;
         transform: translate(0, 0, 0);
     }
-}
-
-/* ============ Login-modal ============ */
-
-.login-modal{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 2000;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-modal.mostrar{
-    display: flex;
-}
-
-.mostrar .modal{
-    animation: modal .5s;
-}
-
-.modal{
-    background: var(--background-color);
-    width: 50%;
-    min-width: 300px;
-    padding: 40px;
-    box-shadow: 0 0 0 10px var(--background-color);
-    position: relative;
-    border-radius: 0.5%;
-}
-
-.modal input {
-    border: none;
-    background-color: var(--secondary-color-light);
-    width: 100%;
-    height: 3rem;
-    border-radius: .5rem;
-    margin-bottom: 1rem;
-    padding: 1rem .5rem 1rem;
-}
-
-.modal button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--background-color);
-    background-color: var(--secondary-color);
-    text-transform: uppercase;
-    border: none;
-    width: 8rem;
-    height: 3rem;
-    border-radius: .5rem;
-    margin: 1rem;
-    cursor: pointer;
-    transition: all .25s;
-}
-
-.modal button:hover {
-    color: var(--secondary-color);
-    background-color: var(--secondary-color-light);
-    border: none;
-    transform: scale(1.05);
-}
-
-.fechar{
-    position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 4px solid white;
-    background: var(--secondary-color);
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
-    font-size: 1rem;
-}
-
-.formLog{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.subtitulo{
-    text-align: center; 
-    padding: 2px;
-    margin: 0 0 0 10px;
-}
-.inputLog{
-    padding: 10px;
-    margin: 10px 0px;
-}
-
-.button{
-    padding: 10px;
-    background: var(--secondary-color);
-    color: white;
-    border-radius: 10%;
-}
-
-button#fechar {
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-    font-size: 2rem;
 }
