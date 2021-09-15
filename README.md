@@ -3,14 +3,14 @@ Checkpoint 01 - Front-end II
 
 O entregável será uma página em HTML5, CSS3 e Javascript. 
 
-Link da aplicação: https://tuliopxavier.github.io/buglog/
-
+Link da aplicação:
+<a href="https://tuliopxavier.github.io/buglog/" target="_blank">https://tuliopxavier.github.io/buglog/</a>
 
 <img height="400px" width="auto" alt="App Screenshot" src="./img/bugLog-screenShot.png">
 
 ## Wireframes do projeto
 
-<img height="200px" width="auto" alt="wireframe 01" src="./img/wireframe01.png"/><img height="200px" width="auto" alt="wireframe 02" src="./img/wireframe02.png"/>
+<img height="200px" width="auto" alt="wireframe 01" src="./img/wireframe01.png" about_blank/><img height="200px" width="auto" alt="wireframe 02" src="./img/wireframe02.png"/>
 
 ## Instruções e requisitos do entregável
 	
