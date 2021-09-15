@@ -1,6 +1,6 @@
 import { openForm, closeForm, openLogin, closeLogin, addButtonValidate, resetInputs } from "./forms.js"
 import { lightMode, darkMode } from "./toggleDarkMode.js";
-import { addCard, removeCard } from "./cards.js";
+import { removeCard, addCard } from "./cards.js";
 import inputCounter from "./inputCounter.js"
 
 // dark and light mode
