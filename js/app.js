@@ -46,7 +46,7 @@ toggle.addEventListener('change', () => {
     toggle.checked ? darkMode() : lightMode();
 });
 // para ativar dark mode ao clicar no texto dark/light mode
-let modeLabel = document.getElementById('mode-label');
+let modeLabel = document.querySelector('.toggle-dark-mode');
 modeLabel.onclick = () => {
     toggle.checked = !toggle.checked;
     toggle.checked ? darkMode() : lightMode();
