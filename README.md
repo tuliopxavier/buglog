@@ -9,6 +9,7 @@ Link da aplicação:
 <hr>
 
 <img height="400px" width="auto" alt="App Screenshot" src="./img/bugLog-screenShot.png">
+<img height="400px" width="auto" alt="Mobile Screenshot" src="./buglog-mobile.png">
 
 ## Wireframes do projeto
 
