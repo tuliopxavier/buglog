@@ -1,4 +1,4 @@
-// abrir e fechar formulário de adicionar card
+// OPEN/CLOSE ADD CARD FORM
 export function openForm(){
     document.getElementById('btn-open-form').addEventListener("click", () => {
         document.getElementById('form-modal').style.display = "flex";
@@ -39,7 +39,7 @@ export const handleClickOutsideForm = (event) => {
 };
 
 
-// formulario de adicionar bugs - verificando se tem algum input vazio (o usuário precisa inserir alguma informação)
+// ADD CARD FORM - CHECKING EMPTY INPUT (USER NEED TO ADD SOMETHING)
 let url = document.getElementById("url_img");
 let titulo = document.getElementById("titulo");
 let inputAddCard = document.querySelectorAll('.input-add-card');
@@ -67,9 +67,7 @@ export const resetInputs = () => {
 };
 
 
-
-
-// abrir e fechar login 
+// OPEN/CLOSE LOGIN 
 
 export function openLogin() {
     document.getElementById('login-btn').addEventListener("click", () => {

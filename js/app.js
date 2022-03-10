@@ -3,36 +3,36 @@ import { lightMode, darkMode } from "./toggleDarkMode.js";
 import { removeCard, addCard } from "./cards.js";
 import inputCounter from "./inputCounter.js"
 
-// adicionando funcionalidade de remover cards
+// ADD REMOVE CARD FEATURE
 removeCard();
 
-// nav links
+// NAV LINKS
 document.querySelector('#exit-btn').onclick = () => { location.reload(); };
 document.querySelector('#logo').addEventListener('click', () => { window.scrollTo(0, 0); });
 
-// abrir e fechar login
+// OPEN/CLOSE LOGIN
 document.getElementById('login-btn').onclick = openLogin();
 document.getElementById('close-login').onclick = closeLogin();
 
-// abrir e fechar modal de adicionar card;
+// OPEN/CLOSE ADD CARD MODAL
 document.getElementById('btn-open-form').onclick = openForm();
 document.getElementById('btn-close-form').onclick = closeForm();
 
-// adicionar o contador no input de descrição
+// ADD COUNTER AT DESCRIPTION INPUT
 document.getElementById("descricao").addEventListener('input', inputCounter);
 
-//selecionar o botão de adicionar card
+// SELECT ADD CARD BUTTON 
 let addNewItem = document.getElementById("btn_Salvar");
 addNewItem.addEventListener("click", addCard);
 
-// verificando se tem algum input vazio (o usuário precisa inserir alguma informação)
+// CHECK IF INPUT IS EMPTY (USER NEED TO ADD SOMETHING)
 let btnWraper = document.getElementById("btn_Salvar_wraper");
 let inputAddCard = document.querySelectorAll('.input-add-card');
 
 btnWraper.addEventListener("mouseover", addButtonValidate);
 addNewItem.addEventListener("focus", addButtonValidate);
 
-// resetando o botão e inputs após verificação
+// RESET BUTTON AND INPUTS AFTER CHECKING
 inputAddCard.forEach(item => {
     item.addEventListener("mouseover", resetInputs);
     item.addEventListener("focus", resetInputs);
@@ -40,19 +40,19 @@ inputAddCard.forEach(item => {
 
 
 
-// dark and light mode
+// DARK/LIGHT MODE
 let toggle = document.getElementById('toggle');
 toggle.addEventListener('change', () => {
     toggle.checked ? darkMode() : lightMode();
 });
-// para ativar dark mode ao clicar no texto dark/light mode
+// TOGGLE DARK/LIGHT MODE ON THE LABEL DARK/LIGHT MODE
 let modeLabel = document.querySelector('.toggle-dark-mode');
 modeLabel.onclick = () => {
     toggle.checked = !toggle.checked;
     toggle.checked ? darkMode() : lightMode();
 };
 
-// menu responsivo
+// RESPONSIVE MENU
 document.getElementById('menu-button').onclick = () => {
     document.getElementById('menu-button').classList.toggle('open');
     document.getElementById('nav-items').classList.toggle('open');

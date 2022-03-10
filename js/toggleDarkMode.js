@@ -20,6 +20,13 @@ export function darkMode() {
     document.querySelectorAll('p').forEach(function(item) {
         item.style.color = '#ccc';
     });
+    document.querySelectorAll('label').forEach(function(item) {
+        item.style.color = '#ccc';
+    });
+    document.querySelectorAll('span').forEach(function(item) {
+        item.style.backgroundColor = '#ccc';
+        item.style.color = '#333';
+    });
     document.getElementById('counter').style.color = 'var(--primary-color)';
 };
 
@@ -41,6 +48,13 @@ export function lightMode() {
         item.style.color = '';
     });
     document.querySelectorAll('p').forEach(function(item) {
+        item.style.color = '';
+    });
+    document.querySelectorAll('label').forEach(function(item) {
+        item.style.color = '';
+    });
+    document.querySelectorAll('span').forEach(function(item) {
+        item.style.backgroundColor = '';
         item.style.color = '';
     });
     document.getElementById('counter').style.color = '';

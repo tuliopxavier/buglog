@@ -438,27 +438,6 @@ footer {
     text-align: center;
 }
 
-footer #team {
-    position: relative;
-    cursor: pointer;
-}
-
-footer #team:hover ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-}
-
-footer ul {
-    display: none;
-    position: absolute;
-    align-items: flex-start;
-    top: -5rem;
-    left: 0;
-    width: 10rem;
-}
-
-
 /* ============ ANIMATIONS ============ */
 
 @keyframes bounce {
@@ -493,15 +472,6 @@ footer ul {
     }
 }
 
-@keyframes slide-out {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(200%);
-    }
-}
-
 
 /* ============ MEDIA QUERIES ============ */
 
@@ -520,7 +490,6 @@ footer ul {
         width: 100%;
         margin: 0;
         padding: 1rem;
-        animation: slide-out .5s ease;
     }
 
     #nav-items div {
@@ -543,6 +512,7 @@ footer ul {
     }
 
     #menu-button {
+        background-color: var(--background-color);
         border: none;
         width: 30px;
         height: 22px;
@@ -601,20 +571,6 @@ footer ul {
         animation: slide-in .5s ease;
     }
 
-}
-
-@media (min-width: 425px) {
-    #logo {
-        margin-left: 2rem;
-    }
-
-    #menu-button {
-        margin-right: 2rem;
-    }
-
-}
-
-@media (max-width: 768px) {
     footer {
         display: block;
     }
@@ -631,4 +587,16 @@ footer ul {
         transform: translateX(-50%);
         width: 10rem;
     }
+
+}
+
+@media (min-width: 425px) {
+    #logo {
+        margin-left: 2rem;
+    }
+
+    #menu-button {
+        margin-right: 2rem;
+    }
+
 }

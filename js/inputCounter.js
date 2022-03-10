@@ -1,11 +1,11 @@
-// conta caracteres no input
+// COUNT INPUT CHARACTERS
 export default function inputCounter() {
     let counter = document.getElementById("counter");
     let counterCircle = document.querySelector('#counter-container span');
     
     counter.innerText = `${130 - descricao.value.length}`;
 
-    // mede quando o contador chega em 10 caracteres e muda pra vermelho
+    // CHECK WHEN COUNTER HIT 10 REMAIN CHARACTERS AND SET RED
     if (descricao.value.length >= 120) {
         counter.style.color = 'var(--tertiary-color)';
         counterCircle.style.borderColor = 'var(--tertiary-color)';

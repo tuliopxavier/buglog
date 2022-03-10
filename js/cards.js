@@ -2,37 +2,33 @@ import { handleClickOutsideForm } from "./forms.js"
 import { darkMode, lightMode } from "./toggleDarkMode.js"
 
 export function addCard(e) {
-    // previnir o comportamento padrão de carregamento
     e.preventDefault();
 
-    //selecionar o id dos campos
     let url = document.getElementById("url_img");
     let titulo = document.getElementById("titulo");
     let descricao = document.getElementById("descricao");
 
-    // selecionar campo onde colocaremos os cards
     let addCard = document.getElementById('btn-open-form');
     let sectionCard = document.getElementsByClassName('card')
 
-    //Selecionando o modal
     let formModal = document.querySelector("#form-modal");
     
-    //verificando se não foi adicionado url e adiciona uma imagem padrão
+    // CHECK IF URL IS INSERTED AND ADD DEFAULT IMAGE
     if (url.value.trim() == "") {
         url.value = "./img/buglog.jpg";
     };
 
-    // verificando se está sem título e adiciona o número do bug
+    // CHECK IF HAVE TITLE AND ADD BUG NUMBER
     if (titulo.value.trim() == "") {
         titulo.value = `Bug #${sectionCard.length + 1}`;
     };
 
-    // verificando se está sem descrição
+    // CHECK IF HAVE DESCRIPTION
     if (descricao.value.trim() == "") {
         descricao.value = '...sem descrição...';
     };
 
-    // reseta contador
+    // RESET COUNTER
     let counter = document.getElementById("counter");
     let counterCircle = document.querySelector('#counter-container span');
     if (counter.length != 0) {
@@ -41,8 +37,7 @@ export function addCard(e) {
         counterCircle.style.borderColor = '';
     };
     
-    //Inserimos cards
-    
+    // ADD CARD
     addCard.insertAdjacentHTML('afterend', `
     <article class="main-card card">
     <div class="card-image">
@@ -55,28 +50,28 @@ export function addCard(e) {
     
     `);
 
-    // Fazer o card aparecer de forma suave
+    // CARD ANIMATION - SMOOTH IN 
     document.querySelector('.card').style.opacity = 0;
     document.querySelector('.card').style.transition = 'all .5s ease';
     setTimeout(()=>{
         document.querySelector('.card').style.opacity = 1;
     },200);
     
-    // retornar os inputs ao padrão (vazio)
+    // RETURN INPUTS TO DEFAULT (EMPTY)
     url.value = "";
     titulo.value = "";
     descricao.value = "";
 
-    // adiciona a funcionalidade de apagar ao cartão recém criado
+    // ADD REMOVE CARD FEATURE TO THE NEW CARD
     removeCard();
 
-    // removendo o listener de fechar o form ao clicar fora
+    // REMOVE CLICK OUTSIDE FUNCTION LISTENER
     document.removeEventListener('click', handleClickOutsideForm, false);
 
-    // adicionando estilo dark/light mode ao criar o card
+    // ADD DARK/LIGHT MODE WHEN CREATE A NEW CARD
     toggle.checked ? darkMode() : lightMode();
     
-    // fecha o modal
+    // CLOSE MODAL
     formModal.style.display = "none";
 };
 
